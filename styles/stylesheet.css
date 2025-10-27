@@ -1,3 +1,8 @@
+.fontawesome {
+  font-size: 1.15rem;
+  color: #333333;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -24,4 +29,10 @@
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+img {
+  border-radius: 8px;
+  margin: 10px;
+  width: 200px;
 }
