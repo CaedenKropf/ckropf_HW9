@@ -3,36 +3,43 @@
   color: #333333;
 }
 
-.tooltip {
+.custom-tooltip {
   position: relative;
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
+.custom-tooltip .custom-tooltip-text {
   visibility: hidden;
   width: 200px;
-  background-color: #333333;
+  background-color: #212529;
   color: #f8f8f8;
-  font-size: 1.15rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   text-align: center;
   border-radius: 6px;
-  padding: 15px;
-
-  /* Position the tooltip text */
+  padding: 12px;
   position: absolute;
   z-index: 1;
   top: 100%;
   left: 50%;
-  margin-left: -100px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.tooltip:hover .tooltiptext {
+.custom-tooltip:hover .custom-tooltip-text {
   visibility: visible;
+  opacity: 1;
 }
 
 img {
   border-radius: 8px;
   margin: 10px;
   width: 200px;
+}
+
+form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
