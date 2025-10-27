@@ -73,5 +73,16 @@
       <p>&copy; 2025 Caeden Kropf</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        const boxes = document.querySelectorAll('input[name="bais_class"]');
+        const anyChecked = Array.from(boxes).some((box) => box.checked);
+        if (!anyChecked) {
+          e.preventDefault();
+          alert("Please select at least one BAIS core class.");
+        }
+      });
+    </script>
   </body>
 </html>
